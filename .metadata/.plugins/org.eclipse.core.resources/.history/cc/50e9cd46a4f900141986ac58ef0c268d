@@ -1,0 +1,7 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class Mine extends JPanel {
+	JButton mineToggle;
+	boolean isMine;
+}

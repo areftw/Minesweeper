@@ -1,0 +1,33 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class MinesweeperTemplate extends JPanel {
+	private static final int WIDTH = 500;
+	private static final int LENGTH = 400;
+	public MinesweeperTemplate()                       // set up graphics window
+    {
+        super();
+        setBackground(Color.WHITE);
+        this.setLayout(null);
+    }
+	
+    public static void main(String[] args)
+    {
+    	MinesweeperTemplate panel = new MinesweeperTemplate();                            // window for drawing
+        JFrame application = new JFrame();                            // the program itself
+        
+        application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   // set frame to exit
+                                                                      // when it is closed
+        application.add(panel);           
+
+        application.setSize(WIDTH, LENGTH);         // window is 500 pixels wide, 400 high
+        for (int i = 0; i <= WIDTH - 30; i+= 30) {
+        	for (int j = 0; j <= LENGTH -30; j+= 30) {
+        		JButton button = new JButton();
+        		button.setBounds(0, 0, 30, 30);
+                panel.add(button);
+        	}
+        }
+        application.setVisible(true);
+    }
+}

@@ -1,0 +1,12 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class Mine extends JPanel {
+	JButton mineToggle;
+	boolean isMine;
+	public Mine(int x, int y) {
+		isMine = false;
+		mineToggle = new JButton();
+		mineToggle.setBounds(5 + x * 35, 5 + y * 35, 30, 30);
+	}
+}
